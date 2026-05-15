@@ -1,64 +1,222 @@
-# Smart Agriculture Crop Disease Detection 🌱🦠
+# 🌱 Smart Agriculture Crop Disease Detection System
 
-**Objective:** Classify plant diseases from leaf images and recommend treatments for healthy crop management.
-
----
-
-## Phase 1 — Data & Classical ML
-
-- **Exploratory Analysis:** Analyze leaf images and disease labels.  
-- **Feature Extraction:** Compute color histograms and texture features.  
-- **Dimensionality Reduction:** Apply PCA on image features for visualization.  
-- **Classical ML Models:**  
-  - K-Nearest Neighbors (KNN)  
-  - Naïve Bayes  
-- **Ensemble Methods:**  
-  - Random Forest  
-  - AdaBoost  
-- **Model Optimization:**  
-  - Cross-validation  
-  - Hyperparameter grid search  
+An AI-powered Smart Agriculture Crop Disease Detection System designed to identify and classify plant diseases using Deep Learning, Computer Vision, and Transfer Learning techniques. The system helps farmers and agricultural researchers detect crop diseases in real time and receive treatment recommendations through an interactive web application.
 
 ---
 
-## Phase 2 — Deep Learning (CNN / Autoencoder / Transfer Learning)
+## Features
 
-- **Convolutional Neural Network (CNN):** Train on PlantVillage dataset.  
-- **Autoencoder (AE):** Detect anomalies between healthy and diseased leaves.  
-- **Transfer Learning:** Fine-tune EfficientNet or MobileNetV2.  
-- **Data Augmentation & Optimizers:** Experiment with rotations, flips, brightness, and different optimizers.  
-- **Evaluation:** Build a confusion matrix dashboard to monitor performance.  
-
----
-
-## Phase 3 — Advanced (Transformers / GANs / Explainable AI)
-
-- **Time-Series Analysis (LSTM):** Analyze crop health indicators over time.  
-- **Attention Mechanism:** Focus on multi-scale leaf features for better detection.  
-- **Generative Adversarial Networks (DCGAN):** Synthesize rare disease samples for data augmentation.  
-- **Vision Transformer (ViT):** Classify leaf diseases with transformer architecture.  
-- **Explainable AI (XAI):** Use LIME and Grad-CAM for visualizing and localizing disease regions.  
+* Real-time plant disease prediction
+* Automatic crop disease classification
+* Upload plant leaf images for instant analysis
+* Confidence score visualization
+* Disease treatment recommendations
+* Grad-CAM visualization for model interpretability
+* Comparison of multiple Deep Learning architectures
+* Interactive Gradio-based web interface
+* High-accuracy CNN and Transfer Learning models
 
 ---
 
 ## Dataset
 
-- **Primary Dataset:** [PlantVillage dataset] (Kaggle)  https://www.kaggle.com/datasets/emmarex/plantdisease
-   
-- **Optional:** Crop type satellite imagery for additional features.  
+The project uses the **PlantVillage Dataset**, containing:
+
+* 54,000+ labeled plant leaf images
+* 15 disease classes
+* Healthy and infected crop categories
+* Multiple crop species
+
+Dataset includes various crop diseases such as:
+
+* Tomato Early Blight
+* Tomato Late Blight
+* Potato Early Blight
+* Pepper Bell Bacterial Spot
+* Healthy Leaf Classes
+* And more...
 
 ---
 
-## Tools & Libraries
+## Models Implemented
 
-- Python, OpenCV, Scikit-learn, TensorFlow/Keras, PyTorch, Pandas, NumPy, Matplotlib/Seaborn
--  **Install the required dependencies:**
-   ```bash
-   pip install -r requirements.txt 
+This project includes implementation and comparison of multiple Machine Learning and Deep Learning models:
+
+### Classical Machine Learning
+
+* Support Vector Machine (SVM)
+* Random Forest
+* K-Nearest Neighbors (KNN)
+
+### Deep Learning Models
+
+* Custom CNN
+* VGG-style CNN
+* MobileNetV2
+* EfficientNetB0
+* Vision Transformer (ViT)
+* Attention-based CNN with CBAM
+* LSTM-based architectures
 
 ---
 
-## Notes
+## 📊 Model Performance
 
-- This project progresses from **classical ML** to **deep learning**, and finally to **advanced AI techniques**.  
-- Each phase builds on the previous one, improving performance and explainability.
+| Model                    | Validation Accuracy |
+| ------------------------ | ------------------- |
+| Custom VGG-style CNN     | ~97.5%              |
+| MobileNetV2              | ~93.6%              |
+| Vision Transformer (ViT) | ~93.3%              |
+| LSTM                     | ~91.7%              |
+
+The custom-designed 4-block VGG-style CNN achieved the best overall performance.
+
+---
+
+## Technologies Used
+
+* Python
+* TensorFlow
+* Keras
+* PyTorch
+* OpenCV
+* NumPy
+* Pandas
+* Matplotlib
+* Seaborn
+* Scikit-learn
+* Gradio
+* CNN
+* Transfer Learning
+* Vision Transformer (ViT)
+* CBAM Attention Module
+* Grad-CAM
+* Deep Learning
+* Computer Vision
+* Git & GitHub
+
+---
+
+## System Architecture
+
+1. Image Upload
+2. Image Preprocessing
+3. Data Augmentation
+4. Feature Extraction
+5. Disease Classification
+6. Confidence Score Generation
+7. Treatment Recommendation
+8. Real-time Prediction Interface
+
+---
+
+## Image Processing Pipeline
+
+The system applies several preprocessing techniques:
+
+* Image resizing
+* Normalization
+* Data augmentation
+* Noise reduction
+* Feature extraction
+* Batch processing
+
+---
+
+## Advanced Features
+
+### Transfer Learning
+
+Pretrained models such as MobileNetV2 and EfficientNetB0 were fine-tuned for improved classification performance.
+
+### Vision Transformer (ViT)
+
+Implemented Transformer-based image classification using patch embeddings and self-attention mechanisms.
+
+### Attention Mechanism (CBAM)
+
+Integrated Convolutional Block Attention Module (CBAM) to improve feature learning and focus on disease regions.
+
+### Grad-CAM Visualization
+
+Used Grad-CAM for visualizing disease regions and improving model interpretability.
+
+---
+
+## 💻 Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/hagerah2005/Smart-Agriculture-Crop-Disease-Detection.git
+cd Smart-Agriculture-Crop-Disease-Detection
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run Application
+
+```bash
+python app.py
+```
+
+---
+
+## Screenshots
+
+### Disease Prediction Interface
+
+(Add screenshot here)
+
+### Model Prediction Results
+
+(Add screenshot here)
+
+---
+
+## Future Improvements
+
+* Mobile application deployment
+* Cloud-based AI prediction API
+* Additional crop disease classes
+* IoT sensor integration
+* Real-time drone monitoring
+* Multi-language support
+* Edge AI optimization
+
+---
+
+## Applications
+
+* Smart Farming
+* Precision Agriculture
+* Crop Health Monitoring
+* Agricultural Research
+* Automated Disease Detection
+* AI-based Farming Assistance
+
+---
+
+## Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Push to your branch
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+
